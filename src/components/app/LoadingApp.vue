@@ -7,7 +7,7 @@
 <script lang="ts" setup>
 defineProps({
   size: { type: String, default: "sm" },
-  color: { type: String, default: "white" },
+  color: { type: String, default: "" },
 });
 </script>
 
