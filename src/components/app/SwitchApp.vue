@@ -1,9 +1,6 @@
 <template>
   <Switch class="switch" v-model="enabled">
-    <span
-      aria-hidden="true"
-      :class="[enabled ? 'translate-x-6' : 'translate-x-1', 'switch__enabled']"
-    />
+    <span aria-hidden="true" />
   </Switch>
 </template>
 
@@ -13,10 +10,18 @@
 
   &.switch[aria-checked="true"] {
     @apply bg-primary;
+
+    span {
+      @apply translate-x-6;
+    }
   }
 
-  &__enabled {
-    @apply pointer-events-none inline-block h-4 w-4 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out;
+  span {
+    @apply translate-x-1 pointer-events-none inline-block h-4 w-4 transform rounded-full bg-white shadow ring-0 transition-all duration-200 ease-in-out;
+  }
+
+  &:active {
+    @apply bg-zinc-400;
   }
 }
 </style>
