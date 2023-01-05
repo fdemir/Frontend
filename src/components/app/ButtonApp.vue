@@ -36,7 +36,7 @@ defineExpose({
 
 <style lang="postcss" scoped>
 .button {
-  @apply transition-all inline-flex font-semibold items-center rounded-xl border border-transparent active:scale-90 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:opacity-75 disabled:cursor-not-allowed disabled:active:scale-100;
+  @apply transition-all inline-flex justify-center font-semibold items-center rounded-xl border border-transparent active:scale-90 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:opacity-75 disabled:cursor-not-allowed disabled:active:scale-100;
 
   &.sm {
     @apply px-2.5 py-2 text-xs;
@@ -59,7 +59,7 @@ defineExpose({
   }
 
   &.constract {
-    @apply bg-white hover:bg-zinc-100 border-2 border-black/40 text-black shadow-sm hover:opacity-80 focus:ring-black/50;
+    @apply bg-white border border-black/10 text-black shadow-sm hover:opacity-80 focus:ring-black/10;
   }
 }
 </style>

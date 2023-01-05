@@ -1,3 +1,15 @@
+<template>
+  <div
+    :class="['avatar', size]"
+    :style="`background-image: linear-gradient(135deg, ${c1} 0%, ${c2} 100%);`"
+  >
+    <img v-if="url" :src="url" :alt="name" />
+    <span class="name" v-else>
+      {{ name.toUpperCase().slice(0, 2) }}
+    </span>
+    <span v-if="status" :class="['status', status]" />
+  </div>
+</template>
 <script setup lang="ts">
 import hash from "string-hash";
 import color from "tinycolor2";
@@ -15,19 +27,6 @@ const c1 = c.toHexString();
 const c2 = c.triad()[1].toHexString();
 </script>
 
-<template>
-  <div
-    :class="['avatar', size]"
-    :style="`background-image: linear-gradient(135deg, ${c1} 0%, ${c2} 100%);`"
-  >
-    <img v-if="url" :src="url" :alt="name" />
-    <span class="name" v-else>
-      {{ name.toUpperCase().slice(0, 2) }}
-    </span>
-    <span v-if="status" :class="['status', status]" />
-  </div>
-</template>
-
 <style lang="postcss" scoped>
 .avatar {
   @apply relative inline-flex items-center justify-center rounded-full bg-zinc-500;
@@ -40,11 +39,11 @@ const c2 = c.triad()[1].toHexString();
     @apply absolute bottom-0 right-0 block rounded-full ring-2 ring-white;
 
     &.online {
-      @apply bg-green-500;
+      @apply bg-emerald-500;
     }
 
     &.offline {
-      @apply bg-red-500;
+      @apply bg-rose-500;
     }
 
     &.busy {

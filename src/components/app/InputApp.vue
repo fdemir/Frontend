@@ -7,7 +7,7 @@
       props.type,
     ]"
   >
-    <div class="flex justify-between" v-if="label">
+    <div class="flex justify-between" v-if="label || hint">
       <label :for="name">{{ label }}</label>
       <span class="hint">{{ hint }}</span>
     </div>
@@ -86,11 +86,11 @@ const updateValue = (event: any) => {
   }
 
   .hint {
-    @apply text-sm text-zinc-500 select-none;
+    @apply w-full text-right text-xs text-zinc-500 select-none capitalize;
   }
 
   input {
-    @apply block font-medium w-full rounded-md shadow-sm border-zinc-300 focus:border-primary focus:ring-primary sm:text-sm disabled:cursor-not-allowed disabled:border-zinc-200 disabled:bg-zinc-50 disabled:text-zinc-500;
+    @apply block font-medium w-full py-2.5 rounded-md border-transparent bg-gray-200/70 focus:bg-transparent focus:border-primary focus:ring-primary text-sm sm:text-xs disabled:cursor-not-allowed disabled:border-zinc-200 disabled:bg-zinc-50 disabled:text-zinc-500;
   }
 
   .icon {
@@ -102,23 +102,23 @@ const updateValue = (event: any) => {
   }
 
   .message {
-    @apply mt-1 text-xs text-zinc-500 select-none;
+    @apply mt-1 text-xs text-zinc-500 select-none capitalize;
   }
 
   &.error {
     input {
-      @apply border-red-300 pl-2 pr-10 text-red-900 placeholder-red-300 focus:border-red-500 focus:outline-none focus:ring-red-500;
+      @apply border-rose-300 pl-2 pr-10 text-rose-900 placeholder-rose-300 focus:border-rose-500 focus:outline-none focus:ring-rose-500;
     }
 
     .message {
-      @apply text-red-600;
+      @apply text-rose-600;
     }
 
     .icon {
       @apply pointer-events-none !important;
 
       svg {
-        @apply h-5 w-5 text-red-400;
+        @apply h-5 w-5 text-rose-400;
       }
     }
   }
@@ -128,7 +128,7 @@ const updateValue = (event: any) => {
       @apply pr-10;
     }
     .icon {
-      @apply pointer-events-auto cursor-pointer absolute inset-y-0 right-0 flex items-center pr-3 !important;
+      @apply transition-transform pointer-events-auto active:scale-90 hover:opacity-70 cursor-pointer absolute inset-y-0 right-0 flex items-center pr-3 !important;
     }
   }
 
