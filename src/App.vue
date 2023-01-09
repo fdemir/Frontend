@@ -16,11 +16,10 @@
     </div>
     <BadgeApp type="secondary">test</BadgeApp>
     <div class="flex gap-2 items-center flex-row-reverse">
-      <AvatarApp name="Fatih" size="xs" />
+      <AvatarApp name="Fatih" size="xs" status="away" />
       <AvatarApp name="Ahmet" size="sm" status="busy" />
       <AvatarApp name="Mustafa" size="md" status="offline" />
       <AvatarApp name="Arda" size="lg" status="online" />
-      <AvatarApp name="Test" size="xl" status="away" />
     </div>
     <div class="w-full py-4">
       <div
