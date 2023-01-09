@@ -42,7 +42,7 @@ defineExpose({
     @apply hidden;
   }
 
-  &.dot {
+  & .dot {
     @apply inline-flex px-1 py-0.5 text-xs;
 
     .dot {
@@ -50,7 +50,7 @@ defineExpose({
     }
   }
 
-  &.action {
+  & .action {
     @apply cursor-pointer pl-2 pr-1 !important;
 
     .action {
@@ -58,15 +58,15 @@ defineExpose({
     }
   }
 
-  &.sm {
+  & .sm {
     @apply px-2.5 py-0.5 text-xs;
   }
 
-  &.lg {
+  & .lg {
     @apply px-3 py-0.5 text-sm;
   }
 
-  &.primary {
+  & .primary {
     @apply bg-primary/10 text-primary;
 
     .action {
@@ -74,7 +74,7 @@ defineExpose({
     }
   }
 
-  &.secondary {
+  & .secondary {
     @apply bg-zinc-100 text-zinc-800;
 
     .action {
