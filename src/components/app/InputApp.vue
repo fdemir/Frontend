@@ -105,7 +105,7 @@ const updateValue = (event: any) => {
     @apply mt-1 text-xs text-zinc-500 select-none capitalize;
   }
 
-  &.error {
+  & .error {
     input {
       @apply border-rose-300 pl-2 pr-10 text-rose-900 placeholder-rose-300 focus:border-rose-500 focus:outline-none focus:ring-rose-500;
     }
@@ -123,28 +123,31 @@ const updateValue = (event: any) => {
     }
   }
 
-  &.password {
+  & .password {
     input {
       @apply pr-10;
     }
+
     .icon {
       @apply transition-transform pointer-events-auto active:scale-90 hover:opacity-70 cursor-pointer absolute inset-y-0 right-0 flex items-center pr-3 !important;
     }
   }
 
-  &.left {
+  & .left {
     input {
       @apply pr-2 pl-10;
     }
+
     .icon {
       @apply pl-3 left-0 right-[unset] !important;
     }
   }
 
-  &.right {
+  & .right {
     input {
       @apply pr-10 pl-2;
     }
+
     .icon {
       @apply pr-3 right-0 left-[unset] !important;
     }
