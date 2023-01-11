@@ -1,8 +1,34 @@
 @import "tailwindcss/base";
-@import "./base-styles.css";
-
 @import "tailwindcss/components";
-/* @import "./components.css"; */
-
 @import "tailwindcss/utilities";
-@import "./utilities.css";
+
+h1 {
+  @apply text-4xl font-bold;
+}
+h2 {
+  @apply text-3xl font-bold;
+}
+h3 {
+  @apply text-2xl font-bold;
+}
+h4 {
+  @apply text-xl font-bold;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  @apply rounded-md shadow-sm border !border-zinc-300 border-transparent text-primary focus:ring-primary disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+input[type="radio"],
+input[type="checkbox"]:checked {
+  @apply !border-transparent;
+}
+
+input[type="radio"] {
+  @apply rounded-full;
+}
+
+label {
+  @apply block text-sm font-semibold text-zinc-700;
+}
