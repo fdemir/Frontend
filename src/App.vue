@@ -1,8 +1,8 @@
 <template>
   <div
-    class="h-screen bg-zinc-100 w-full flex flex-col items-center gap-5 justify-center"
+    class="flex flex-col items-center justify-center w-full h-screen gap-5 bg-zinc-100"
   >
-    <div class="w-full flex justify-center gap-5 items-center">
+    <div class="flex items-center justify-center w-full gap-5">
       <ButtonApp>Test</ButtonApp>
       <SwitchApp />
       <InputApp name="test" label="test" hint="test" help="test" />
@@ -15,7 +15,7 @@
       <h4>test</h4>
     </div>
     <BadgeApp type="secondary">test</BadgeApp>
-    <div class="flex gap-2 items-center flex-row-reverse">
+    <div class="flex flex-row-reverse items-center gap-2">
       <AvatarApp name="Fatih" size="xs" status="away" />
       <AvatarApp name="Ahmet" size="sm" status="busy" />
       <AvatarApp name="Mustafa" size="md" status="offline" />
@@ -23,13 +23,13 @@
     </div>
     <div class="w-full py-4">
       <div
-        class="mx-auto bg-white shadow-lg px-6 pt-6 pb-4 rounded-xl max-w-xs w-full gap-2 flex flex-col"
+        class="flex flex-col w-full max-w-xs gap-2 px-6 pt-6 pb-4 mx-auto bg-white shadow-lg rounded-xl"
       >
         <h4>Login</h4>
         <InputApp placeholder="Kullanıcı Adı" />
         <InputApp type="password" placeholder="Şifre" />
         <CheckboxApp label="Beni Hatırla" name="test1" />
-        <div class="gap-2 flex w-full">
+        <div class="flex w-full gap-2">
           <ButtonApp class="w-2/3 gap-2" ref="button" @click="test"
             >Login <ArrowRightIcon class="w-4 h-4"
           /></ButtonApp>
@@ -46,7 +46,7 @@ import { ArrowRightIcon } from "@heroicons/vue/20/solid";
 import CheckboxApp from "./components/app/CheckboxApp.vue";
 const button = ref<any>(null);
 
-const test = (): void => {
+const test = () => {
   button.value?.setLoad(true);
 };
 </script>

@@ -36,8 +36,10 @@ defineProps({
 
 const emit = defineEmits(["update:modelValue"]);
 
-const updateValue = (e: any) => {
-  emit("update:modelValue", e.target.checked);
+const updateValue = (event: Event) => {
+  const checkbox = event.target as HTMLInputElement;
+  const value = checkbox.checked;
+  emit("update:modelValue", value);
 };
 </script>
 

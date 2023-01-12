@@ -19,9 +19,7 @@ const props = defineProps({
 
 const disabled = ref(props.disabled);
 
-const focus = () => {
-  button.value?.focus();
-};
+const focus = () => button.value?.focus();
 
 const setLoad = (load = false) => {
   loading.value = load;

@@ -20,6 +20,7 @@
     </p>
   </div>
 </template>
+
 <script setup lang="ts">
 import { ref } from "vue";
 
@@ -60,12 +61,12 @@ const props = defineProps({
   },
 });
 
-function resizeChange() {
-  if (textarea.value && props.autoHeight) {
-    textarea.value.style.height = "auto";
-    textarea.value.style.height = textarea.value.scrollHeight + 10 + "px";
-  }
-}
+const resizeChange = () => {
+  if (!(textarea.value && props.autoHeight)) return;
+
+  textarea.value.style.height = textarea.value.scrollHeight + 10 + "px";
+  textarea.value.style.height = "auto";
+};
 </script>
 
 <style lang="postcss" scoped>

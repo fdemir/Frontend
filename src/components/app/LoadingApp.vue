@@ -13,17 +13,14 @@ defineProps({
 
 <style lang="postcss" scoped>
 .loading {
-  -webkit-animation: loading-1 4.8s linear infinite;
   animation: loading-1 4.8s linear infinite;
 
   .load {
     @apply block absolute inset-0 w-8 h-8 m-auto;
-    -webkit-animation: loading-2 1.2s linear infinite;
     animation: loading-2 1.2s linear infinite;
 
     & ::after {
       @apply content-[''] absolute inset-0 m-auto w-8 h-8 border-[3px] border-[v-bind(color)] rounded-full;
-      -webkit-animation: loading-3 1.2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
       animation: loading-3 1.2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
     }
   }
