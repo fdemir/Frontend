@@ -1,7 +1,7 @@
 <template>
   <div
     :class="['avatar', size]"
-    :style="`background-image: linear-gradient(135deg, ${c1} 0%, ${c2} 100%);`"
+    :style="`background-image: linear-gradient(135deg, ${colorList[0]} 0%, ${colorList[1]} 100%);`"
   >
     <img v-if="url" :src="url" :alt="name" />
     <span class="name" v-else>
@@ -22,9 +22,12 @@ const props = defineProps({
 });
 
 const hashed = hash(props.name);
-const c = color({ h: hashed % 360, s: 0.95, l: 0.5 });
-const c1 = c.toHexString();
-const c2 = c.triad()[1].toHexString();
+const avatarColor = color({ h: hashed % 360, s: 0.95, l: 0.5 });
+
+const colorList = [
+  avatarColor.toHexString(),
+  avatarColor.triad()[1].toHexString(),
+];
 </script>
 
 <style lang="postcss" scoped>
