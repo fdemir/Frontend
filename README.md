@@ -1,5 +1,81 @@
 # Lefine
 
+Web application for stream and view videos with ur friends.
+
+## Technologies
+
+Here are the following technologies that has been used:
+
+- TypeScript
+- Vue + Vite
+- Vue Router
+- TailwindCSS
+- Headless UI
+- Pinia
+- Storybook
+
+## Project Structure
+
+```sh
+├── src/
+│   ├── assets # Static assets
+│   ├── components # Reusable components
+│   ├── router  # Vue Router configuration
+│   ├── stores # Pinia stores
+│   └── views # Pages
+└── main.ts # Project entry point
+```
+
+### Folder Structure
+
+## Project Setup
+
+```sh
+yarn install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+yarn dev
+```
+
+### Type-Check, Compile and Minify for Production
+
+```sh
+yarn build
+```
+
+### Run Unit Tests with [Vitest](https://vitest.dev/)
+
+```sh
+yarn test:unit
+```
+
+### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
+
+```sh
+yarn test:e2e:dev
+```
+
+This runs the end-to-end tests against the Vite development server.
+It is much faster than the production build.
+
+But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
+
+```sh
+yarn build
+yarn test:e2e
+```
+
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+yarn lint
+```
+
+<!-- # Lefine
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
@@ -65,4 +141,4 @@ npm run test:e2e
 
 ```sh
 npm run lint
-```
+``` -->
