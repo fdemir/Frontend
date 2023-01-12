@@ -35,7 +35,7 @@ const colorList = [
   @apply relative inline-flex items-center justify-center rounded-full bg-zinc-500;
 
   .name {
-    @apply font-medium leading-none text-white select-none;
+    @apply select-none font-medium leading-none text-white;
   }
 
   .status {

@@ -46,7 +46,7 @@ defineExpose({
     @apply inline-flex px-1 py-0.5 text-xs;
 
     .dot {
-      @apply block -ml-0.5 mr-1.5 h-2 w-2 opacity-50;
+      @apply -ml-0.5 mr-1.5 block h-2 w-2 opacity-50;
     }
   }
 

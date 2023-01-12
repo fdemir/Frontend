@@ -16,80 +16,80 @@ defineProps({
   animation: loading-1 4.8s linear infinite;
 
   .load {
-    @apply block absolute inset-0 w-8 h-8 m-auto;
+    @apply absolute inset-0 m-auto block h-8 w-8;
     animation: loading-2 1.2s linear infinite;
 
     & ::after {
-      @apply content-[''] absolute inset-0 m-auto w-8 h-8 border-[3px] border-[v-bind(color)] rounded-full;
+      @apply absolute inset-0 m-auto h-8 w-8 rounded-full border-[3px] border-[v-bind(color)] content-[''];
       animation: loading-3 1.2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
     }
   }
 
   & .xs {
-    @apply w-3 h-3;
+    @apply h-3 w-3;
 
     .load {
-      @apply w-3 h-3;
+      @apply h-3 w-3;
       clip: rect(0, 12px, 12px, 6px);
 
       & ::after {
-        @apply w-3 h-3 border-2;
+        @apply h-3 w-3 border-2;
         clip: rect(0, 12px, 12px, 6px);
       }
     }
   }
 
   & .sm {
-    @apply w-4 h-4;
+    @apply h-4 w-4;
 
     .load {
-      @apply w-4 h-4;
+      @apply h-4 w-4;
       clip: rect(0, 16px, 16px, 8px);
 
       & ::after {
-        @apply w-4 h-4 border-2;
+        @apply h-4 w-4 border-2;
         clip: rect(0, 16px, 16px, 8px);
       }
     }
   }
 
   & .md {
-    @apply w-5 h-5;
+    @apply h-5 w-5;
 
     .load {
-      @apply w-5 h-5;
+      @apply h-5 w-5;
       clip: rect(0, 20px, 20px, 10px);
 
       & ::after {
-        @apply w-5 h-5 border-2;
+        @apply h-5 w-5 border-2;
         clip: rect(0, 20px, 20px, 10px);
       }
     }
   }
 
   & .lg {
-    @apply w-6 h-6;
+    @apply h-6 w-6;
 
     .load {
-      @apply w-6 h-6;
+      @apply h-6 w-6;
       clip: rect(0, 24px, 24px, 12px);
 
       & ::after {
-        @apply w-6 h-6 border-[3px];
+        @apply h-6 w-6 border-[3px];
         clip: rect(0, 24px, 24px, 12px);
       }
     }
   }
 
   & .xl {
-    @apply w-7 h-7;
+    @apply h-7 w-7;
 
     .load {
-      @apply w-7 h-7;
+      @apply h-7 w-7;
       clip: rect(0, 28px, 28px, 14px);
 
       & ::after {
-        @apply w-7 h-7 border-[3px];
+        @apply h-7 w-7 border-[3px];
         clip: rect(0, 28px, 28px, 14px);
       }
     }

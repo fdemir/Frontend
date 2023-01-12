@@ -1,8 +1,8 @@
 <template>
   <div
-    class="flex flex-col items-center justify-center w-full h-screen gap-5 bg-zinc-100"
+    class="flex h-screen w-full flex-col items-center justify-center gap-5 bg-zinc-100"
   >
-    <div class="flex items-center justify-center w-full gap-5">
+    <div class="flex w-full items-center justify-center gap-5">
       <ButtonApp>Test</ButtonApp>
       <SwitchApp />
       <InputApp name="test" label="test" hint="test" help="test" />
@@ -23,7 +23,7 @@
     </div>
     <div class="w-full py-4">
       <div
-        class="flex flex-col w-full max-w-xs gap-2 px-6 pt-6 pb-4 mx-auto bg-white shadow-lg rounded-xl"
+        class="mx-auto flex w-full max-w-xs flex-col gap-2 rounded-xl bg-white px-6 pt-6 pb-4 shadow-lg"
       >
         <h4>Login</h4>
         <InputApp placeholder="Kullanıcı Adı" />
@@ -31,7 +31,7 @@
         <CheckboxApp label="Beni Hatırla" name="test1" />
         <div class="flex w-full gap-2">
           <ButtonApp class="w-2/3 gap-2" ref="button" @click="test"
-            >Login <ArrowRightIcon class="w-4 h-4"
+            >Login <ArrowRightIcon class="h-4 w-4"
           /></ButtonApp>
           <ButtonApp class="w-1/3" type="constract">Cancel</ButtonApp>
         </div>

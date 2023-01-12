@@ -72,19 +72,19 @@ const resizeChange = () => {
 <style lang="postcss" scoped>
 .textarea {
   label {
-    @apply block text-sm font-medium text-zinc-700 capitalize;
+    @apply block text-sm font-medium capitalize text-zinc-700;
   }
 
   textarea {
-    @apply resize-none block w-full rounded-md border-transparent bg-gray-200/70 focus:bg-transparent focus:border-primary focus:ring-primary text-sm sm:text-xs;
+    @apply block w-full resize-none rounded-md border-transparent bg-gray-200/70 text-sm focus:border-primary focus:bg-transparent focus:ring-primary sm:text-xs;
   }
 
   .hint {
-    @apply w-full text-right text-xs text-zinc-500 select-none capitalize;
+    @apply w-full select-none text-right text-xs capitalize text-zinc-500;
   }
 
   .message {
-    @apply mt-1 text-xs text-zinc-500 select-none capitalize;
+    @apply mt-1 select-none text-xs capitalize text-zinc-500;
   }
 
   &.resize {

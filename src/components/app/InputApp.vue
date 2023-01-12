@@ -81,15 +81,15 @@ const updateValue = (event: Event) =>
 <style lang="postcss" scoped>
 .input {
   label {
-    @apply block text-sm font-medium text-zinc-700 capitalize;
+    @apply block text-sm font-medium capitalize text-zinc-700;
   }
 
   .hint {
-    @apply w-full text-right text-xs text-zinc-500 select-none capitalize;
+    @apply w-full select-none text-right text-xs capitalize text-zinc-500;
   }
 
   input {
-    @apply block font-medium w-full py-2.5 rounded-md border-transparent bg-gray-200/70 focus:bg-transparent focus:border-primary focus:ring-primary text-sm sm:text-xs disabled:cursor-not-allowed disabled:border-zinc-200 disabled:bg-zinc-50 disabled:text-zinc-500;
+    @apply block w-full rounded-md border-transparent bg-gray-200/70 py-2.5 text-sm font-medium focus:border-primary focus:bg-transparent focus:ring-primary disabled:cursor-not-allowed disabled:border-zinc-200 disabled:bg-zinc-50 disabled:text-zinc-500 sm:text-xs;
   }
 
   .icon {
@@ -101,7 +101,7 @@ const updateValue = (event: Event) =>
   }
 
   .message {
-    @apply mt-1 text-xs text-zinc-500 select-none capitalize;
+    @apply mt-1 select-none text-xs capitalize text-zinc-500;
   }
 
   & .error {
@@ -128,7 +128,7 @@ const updateValue = (event: Event) =>
     }
 
     .icon {
-      @apply transition-transform pointer-events-auto active:scale-90 hover:opacity-70 cursor-pointer absolute inset-y-0 right-0 flex items-center pr-3 !important;
+      @apply pointer-events-auto absolute inset-y-0 right-0 flex cursor-pointer items-center pr-3 transition-transform hover:opacity-70 active:scale-90 !important;
     }
   }
 
@@ -138,7 +138,7 @@ const updateValue = (event: Event) =>
     }
 
     .icon {
-      @apply pl-3 left-0 right-[unset] !important;
+      @apply left-0 right-[unset] pl-3 !important;
     }
   }
 
@@ -148,7 +148,7 @@ const updateValue = (event: Event) =>
     }
 
     .icon {
-      @apply pr-3 right-0 left-[unset] !important;
+      @apply right-0 left-[unset] pr-3 !important;
     }
   }
 }

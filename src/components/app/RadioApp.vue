@@ -47,7 +47,7 @@ const updateValue = (event: Event) => {
 
 <style lang="postcss" scoped>
 .checkbox {
-  @apply flex items-center gap-2 select-none;
+  @apply flex select-none items-center gap-2;
 
   &.disabled {
     @apply cursor-not-allowed opacity-50;
